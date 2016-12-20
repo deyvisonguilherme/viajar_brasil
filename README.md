@@ -1,18 +1,16 @@
 # senem
 
-generated using Luminus version "2.9.11.18"
-
-FIXME
+Simulador da prova do ENEM
 
 ## Prerequisites
 
-You will need [Leiningen][1] 2.0 or above installed.
+Para executar este projeto baixe a versão [Leiningen][1] 2.0 ou maior.
 
 [1]: https://github.com/technomancy/leiningen
 
 ## Running
 
-To start a web server for the application, run:
+Para executar baixe o projeto e execute o comando abaixo.
 
     lein run
 
