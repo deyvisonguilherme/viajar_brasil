@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>Pagina Principal</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+                    <a class="navbar-brand" href="#">SENEM</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#contact">Simulado</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrativo<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="active"><a href="caderno.html">Caderno</a></li>
+                                <li><a href="#">Questões</a></li>
+                                <li><a href="#">Respostas</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-header">Perfis</li>
+                                <li><a href="#">Usuário</a></li>
+                                <li><a href="#">Ranker</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Ranker</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="./">Login<span class="sr-only">(current)</span></a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
+
+        <!-- Main component for a primary marketing message or call to action -->
+        <div class="jumbotron">
+            <h1>Navbar example</h1>
+            <p>This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
+            <p>
+                <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="javascript:void(0);" id="cadCaderno">Cadastrar caderno</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="javascript:void(0);" id="listCaderno">Listar cadernos</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="javascript:void(0);">Atualizar caderno</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="javascript:void(0);">Deletar caderno</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-8" id="contentCaderno">
+
+            </div>
+        </div>
+    </div>
+    <!-- /container -->
+
+    <script src="assets/jquery/jquery-3.1.1.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/custom/js/handlers.js"></script>
+</body>
+
+</html>
