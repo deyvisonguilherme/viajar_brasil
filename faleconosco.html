@@ -24,13 +24,13 @@
                 <p>Toggleable via the navbar brand.</p>
             </div>
         </div>
-        <nav class="navbar navbar-light navbar-static-top bg-faded">
+        <nav class="navbar navbar-dark navbar-full bg-inverse">
             <div class="container">
                 <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-expanded="false" aria-controls="exCollapsingNavbar2" aria-label="Toggle navigation"></button>
                 <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
                     <a class="navbar-brand" href="javascript:void(0);">SENEM</a>
                     <ul class="nav navbar-nav">
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="index.html">Início<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
@@ -52,7 +52,7 @@
                             <a class="nav-link" href="ranker.html">Ranker</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="faleconosco.html">Fale conosco</a>
+                            <a class="nav-link active" href="faleconosco.html">Fale conosco</a>
                         </li>
                     </ul>
                 </div>
@@ -61,9 +61,9 @@
     </div>
 
     <!-- Begin page content -->
-    <div class="container">
+    <div class="container page">
         <div class="mt-1">
-            <h1>Em que podemos ajudar?</h1>
+            <h1 class="text-info">Em que podemos ajudar?</h1>
         </div>
         <p class="lead">Um pequeno sistema de para geração de simulados para o exame nacional do ensino médio brasileiro, uma ferramenta rápida e fácil para testar seus conhecimentos.</p>
         <p>Desejamos para você um bom simulado, qualquer dúvida entre em contato conosco pela página de atendimento
@@ -71,17 +71,23 @@
         </p>
         <p>Saiba mais <a href="sobre.html">em poucos passos você conseguirar montar um simulado.</a></p>
         <form action="">
-            <div class="row form-group col-xs-4">
+            <div class="form-group row">
+              <div class="col-xs-6">
                 <label for="txtnome">Nome:</label>
                 <input type="text" class="form-control" id="txtnome" aria-describeby="nome" placeholder="Deyvison Guilherme">
+              </div>
             </div>
-            <div class="form-group col-xs-4">
+          <div class="form-group row">
+            <div class="col-xs-6">
                 <label for="email">Email:</label>
-                <input type="text" class="form-control" id="txtemail" aria-describeby="email" placeholder="deyvison.guilherme@live.com">
+                <input type="text" class="form-control col-xs-4" id="txtemail" aria-describeby="email" placeholder="deyvison.guilherme@live.com">
             </div>
-                <div class="form-group">
+            </div>
+                <div class="form-group row">
+                  <div class="col-xs-6">
                     <label for="txtduvida">Mensagem:</label>
-                    <textarea class="form-control" id="txtduvida" rows="6" placeholder="Como podemos ajudar, para melhor aproveitamento desta ferramenta."></textarea>
+                    <textarea class="form-control" id="txtduvida" rows="8" placeholder="Como podemos ajudar, para melhor aproveitamento desta ferramenta."></textarea>
+                  </div>
                 </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

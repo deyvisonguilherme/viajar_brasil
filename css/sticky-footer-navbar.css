@@ -35,3 +35,7 @@ body > .container {
 code {
   font-size: 80%;
 }
+
+.page{
+  height: 768px;
+}

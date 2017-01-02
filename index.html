@@ -4,14 +4,13 @@
 <head>
     <meta charset="utf-8">
     <title>Pagina Principal</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
-    <link rel="stylesheet" href="bootstrap-4.0.0a5/css/bootstrap-reboot.min.css">
+    <meta name="description" content="sistema de simulação para prova do enem">
+    <meta name="author" content="Deyvison Guilherme">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="bootstrap-4.0.0a5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/sticky-footer-navbar.css">
-    <!-- <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-theme.min.css"> -->
+    <!-- <link rel="stylesheet" href="css/sticky-footer-navbar.css"> -->
+    <link rel="stylesheet" href="css/custom.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 
@@ -24,7 +23,7 @@
                 <p>Toggleable via the navbar brand.</p>
             </div>
         </div>
-        <nav class="navbar navbar-light navbar-static-top bg-faded">
+        <nav class="navbar navbar-full navbar-light bg-faded">
             <div class="container">
                 <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-expanded="false" aria-controls="exCollapsingNavbar2" aria-label="Toggle navigation"></button>
                 <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
@@ -61,13 +60,24 @@
     </div>
 
     <!-- Begin page content -->
-    <div class="container">
+    <div class="fluid-container page">
         <div class="mt-1">
-            <h1>SENEM, Simulados para exame nacional do ensino médio</h1>
+            <h1>SENEM</h1>
+            <!-- <h1>SENEM, Simulados para exame nacional do ensino médio</h1> -->
         </div>
+        <div class="row faixa">
+          <p class="lead">Simulado para exame nacional do ensino médio</p>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6 left"></div>
+            <div class="col-xs-6 right"></div>
+        </div>
+
+        <!--
         <p class="lead">Um pequeno sistema de para geração de simulados para o exame nacional do ensino médio brasileiro, uma ferramenta rápida e fácil para testar seus conhecimentos.</p>
         <p>Desejamos para você um bom simulado, qualquer dúvida entre em contato conosco pela página de atendimento <a href="faleconosco.html"></a></p>
-        <p>Saiba mais <a href="sobre.html">em poucos passos você conseguirar montar um simulado.</a></p>
+        <p>Saiba mais <a href="sobre.html">em poucos passos você conseguirar montar um simulado.</a></p> -->
     </div>
 
     <footer class="footer">
@@ -77,6 +87,7 @@
     </footer>
 
     <script src="jquery/jquery-3.1.1.min.js"></script>
+    <script src="tether/dist/js/tether.min.js"></script>
     <script src="bootstrap-4.0.0a5/js/bootstrap.min.js"></script>
     <script src="js/handlers.js"></script>
 </body>
