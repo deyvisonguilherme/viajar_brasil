@@ -1,0 +1,21 @@
+
+/**********************************************************/
+// // Migrate the schema
+// db.AutoMigrate(&Product{})
+
+// // Create
+// db.Create(&Product{Code: "l1212", Price: 1000})
+
+// // Read
+// var product Product
+// db.First(&product, 1) //Find product whitd id = 1
+// db.First(&product, "code = ?","L1212") // Find product with code L1212
+
+// // Update - update product's price to 2000
+// db.Model(&product).Update("Price", 2000)
+
+// Delete - delete product
+// db.Delete(&product)
+
+// fmt.Fprint(w, "Successfull")
+// }

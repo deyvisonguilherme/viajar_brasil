@@ -1,14 +1,14 @@
 package main
 
 import (
-	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/postgres"
 )
 
 type Caderno struct {
 	Cd_caderno   int64  `gorm:"primary_key"`
 	Cor          string `gorm:"type:varchar(10); not null"`
 	Titulo       string `gorm:"type:varchar(30); not null"`
-	Dt_aplicacao time.time
+	Dt_aplicacao `gorm:"type:timestamp; not null"`
 }
 
 type Perguntas struct {
@@ -42,8 +42,8 @@ type dbUsuario struct {
 	Cd_usuario    []Usuario
 	Escolaridade  string `gorm:"type:varchar(15), not null"`
 	En_medio      `gorm:"type:char(7);check(En_medio=Público or En_medio=Privado)"`
-	Dt_nascimento time.time `gorm:"not null"`
-	Cidade        string    `gorm:"type:varchar(50); not null"`
+	Dt_nascimento `gorm:"type:timestamp; not null"`
+	Cidade        string `gorm:"type:varchar(50); not null"`
 	Estado        `gorm:"type:char(2); not null"`
 }
 
@@ -51,7 +51,7 @@ type Simulado struct {
 	Cd_simulado int64 `gorm:"primary_key"`
 	Cd_usuario  []Usuario
 	Cd_caderno  []Caderno
-	Dt_simulado time.time `gorm:"not null"`
-	Questao     int64     `gorm:"not null"`
-	Resposta    int64     `gorm:"not null"`
+	Dt_simulado `gorm:"type:timestamp; not null"`
+	Questao     int64 `gorm:"not null"`
+	Resposta    int64 `gorm:"not null"`
 }

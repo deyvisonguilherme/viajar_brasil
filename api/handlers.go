@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/deyvison/senem"
 	"github.com/julienschmidt/httprouter"
 	"log"
 	"net/http"
@@ -16,37 +17,26 @@ func Hello(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 
 }
 
-/**********************************************************
-trabalhando com struct*/
-// type Caderno struct{
-// 	gorm.Model
-// 	Code string
-// 	Price uint
-// }
+func GetListCaderno(w http.ResponseWriter, r *http.Request, ps httrouter.Params) {
+	var caderno Caderno
+	db.First(&caderno)
+}
 
-// func TestProduct(w http.ResponseWriter, r *http.Request, _ httprouter.Params){
-// 	db, err := gorm.Open("postgres", "host=localhost user=deyvison dbname=learngo sslmode=disable password=88072762")
-// 	if err != nil {
-// 		panic("failed to connect database")
-// 	}
-//   defer db.Close()
+func GetCadernoById(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
+	var caderno Caderno
+	db.First(&caderno, ps.Cd_Caderno)
+}
 
-// // Migrate the schema
-// db.AutoMigrate(&Product{})
+func AddCaderno(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
+	db.Create(&Caderno{})
+}
 
-// // Create
-// db.Create(&Product{Code: "l1212", Price: 1000})
+func UpCaderno() {
+	var caderno Caderno
+	db.Model(&caderno).Update("params", "value")
+}
 
-// // Read
-// var product Product
-// db.First(&product, 1) //Find product whitd id = 1
-// db.First(&product, "code = ?","L1212") // Find product with code L1212
-
-// // Update - update product's price to 2000
-// db.Model(&product).Update("Price", 2000)
-
-// Delete - delete product
-// db.Delete(&product)
-
-// fmt.Fprint(w, "Successfull")
-// }
+func DelCaderno(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
+	var caderno Caderno
+	db.Delete(&caderno)
+}
