@@ -1,0 +1,46 @@
+    <!-- Begin page content -->
+    <div class="container page">
+        <div class="mt-1">
+            <h1 class="text-info">Em que podemos ajudar?</h1>
+        </div>
+        <p class="lead">Um pequeno sistema de para geração de simulados para o exame nacional do ensino médio brasileiro, uma ferramenta rápida e fácil para testar seus conhecimentos.</p>
+        <p>Desejamos para você um bom simulado, qualquer dúvida entre em contato conosco pela página de atendimento
+            <a href="faleconosco.html"></a>
+        </p>
+        <p>Saiba mais <a href="sobre.html">em poucos passos você conseguirar montar um simulado.</a></p>
+        <form action="">
+            <div class="form-group row">
+              <div class="col-xs-6">
+                <label for="txtnome">Nome:</label>
+                <input type="text" class="form-control" id="txtnome" aria-describeby="nome" placeholder="Deyvison Guilherme">
+              </div>
+            </div>
+          <div class="form-group row">
+            <div class="col-xs-6">
+                <label for="email">Email:</label>
+                <input type="text" class="form-control col-xs-4" id="txtemail" aria-describeby="email" placeholder="deyvison.guilherme@live.com">
+            </div>
+            </div>
+                <div class="form-group row">
+                  <div class="col-xs-6">
+                    <label for="txtduvida">Mensagem:</label>
+                    <textarea class="form-control" id="txtduvida" rows="8" placeholder="Como podemos ajudar, para melhor aproveitamento desta ferramenta."></textarea>
+                  </div>
+                </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <span class="text-muted">Desenvolvido por: <em>Deyvison Guilherme</em> / <a href="https://github.com/deyvisonguilherme">Github</a>.</span>
+        </div>
+    </footer>
+
+    <script src="jquery/jquery-3.1.1.min.js"></script>
+    <script src="tether/js/tether.min.js"></script>
+    <script src="bootstrap-4.0.0a5/js/bootstrap.min.js"></script>
+    <script src="js/handlers.js"></script>
+</body>
+
+</html>

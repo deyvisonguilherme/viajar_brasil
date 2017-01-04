@@ -1,0 +1,24 @@
+
+    <!-- Begin page content -->
+    <div class="container page">
+        <!-- <div class="mt-1">
+            <h1>SENEM, Simulados para exame nacional do ensino médio</h1>
+        </div>
+        <p class="lead">Um pequeno sistema de para geração de simulados para o exame nacional do ensino médio brasileiro, uma ferramenta rápida e fácil para testar seus conhecimentos.</p>
+        <p>Desejamos para você um bom simulado, qualquer dúvida entre em contato conosco pela página de atendimento <a href="faleconosco.html"></a></p>
+        <p>Saiba mais <a href="sobre.html">em poucos passos você conseguirar montar um simulado.</a></p> -->
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <span class="text-muted">Desenvolvido por: <em>Deyvison Guilherme</em> / <a href="https://github.com/deyvisonguilherme">Github</a>.</span>
+        </div>
+    </footer>
+
+    <script src="jquery/jquery-3.1.1.min.js"></script>
+    <script src="tether/js/tether.min.js"></script>
+    <script src="bootstrap-4.0.0a5/js/bootstrap.min.js"></script>
+    <script src="js/handlers.js"></script>
+</body>
+
+</html>

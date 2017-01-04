@@ -13,10 +13,19 @@ defmodule Senem.Router do
     plug :accepts, ["json"]
   end
 
+# router pagina home
   scope "/", Senem do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/sobre", PageController, :sobre
+    get "/simulado", PageController, :simulado
+    get "/caderno", PageController, :caderno
+    get "/questoes", PageController, :questoes
+    get "/respostas", PageController, :respostas
+    get "/usuario", PageController, :usuarios
+    get "/ranker", PageController, :ranker
+    get "/faleconosco", PageController, :faleconosco
   end
 
   # Other scopes may use custom stacks.
