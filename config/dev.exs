@@ -35,8 +35,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :senem, Senem.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "deyvison",
+  password: "codesp1",
   database: "senem_dev",
   hostname: "localhost",
   pool_size: 10

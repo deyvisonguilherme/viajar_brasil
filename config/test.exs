@@ -12,8 +12,8 @@ config :logger, level: :warn
 # Configure your database
 config :senem, Senem.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "deyvison",
+  password: "codesp1",
   database: "senem_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Início | SENEM</title>
+    <title><%= assigns[:page_title] <> " | SENEM" %></title>
     <meta name="description" content="sistema de simulação para prova do enem">
     <meta name="author" content="Deyvison Guilherme">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
