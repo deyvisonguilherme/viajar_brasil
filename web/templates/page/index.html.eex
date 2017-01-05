@@ -8,7 +8,7 @@
 <div class="container-fluid">
     <div class="row faixa">
         <div class="container">
-            <p> <a href="sobre.html">Saiba - mais</a> sobre como funciona esta ferramenta</p>
+            <p> <a href="/sobre">Saiba - mais</a> sobre como funciona esta ferramenta</p>
         </div>
     </div>
     <div class="album">

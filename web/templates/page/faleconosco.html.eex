@@ -1,32 +1,31 @@
-    <!-- Begin page content -->
-    <div class="container page">
-        <div class="mt-1">
-            <h1 class="text-info">Em que podemos ajudar?</h1>
-        </div>
-        <p class="lead">Um pequeno sistema de para geração de simulados para o exame nacional do ensino médio brasileiro, uma ferramenta rápida e fácil para testar seus conhecimentos.</p>
-        <p>Desejamos para você um bom simulado, qualquer dúvida entre em contato conosco pela página de atendimento
-            <a href="faleconosco.html"></a>
-        </p>
-        <p>Saiba mais <a href="sobre.html">em poucos passos você conseguirar montar um simulado.</a></p>
+<div class="container">
+    <div class="row">
+            <h1>pagina de contatos</h1>
+    </div>
+    <div class="faixa"></div>
+    <div class="row">
         <form action="">
-            <div class="form-group row">
-              <div class="col-xs-6">
-                <label for="txtnome">Nome:</label>
-                <input type="text" class="form-control" id="txtnome" aria-describeby="nome" placeholder="Deyvison Guilherme">
-              </div>
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" class="form-control" id="nome" placeholder="Steven Jobs" />
             </div>
-          <div class="form-group row">
-            <div class="col-xs-6">
-                <label for="email">Email:</label>
-                <input type="text" class="form-control col-xs-4" id="txtemail" aria-describeby="email" placeholder="deyvison.guilherme@live.com">
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" placeholder="steven.jobs@senem.com" class="form-control" />
             </div>
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" class="form-control" placeholder="(00) 00000 - 0000" />
             </div>
-                <div class="form-group row">
-                  <div class="col-xs-6">
-                    <label for="txtduvida">Mensagem:</label>
-                    <textarea class="form-control" id="txtduvida" rows="8" placeholder="Como podemos ajudar, para melhor aproveitamento desta ferramenta."></textarea>
-                  </div>
-                </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="form-group">
+                <label for="assunto">Assunto:</label>
+                <input type="text" id="assunto" class="form-control" placeholder="Dúvida" />
+            </div>
+            <div class="form-group">
+                <label for="assunto">Mensagem:</label>
+                <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="Dúvidas?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
     </div>
+</div>
