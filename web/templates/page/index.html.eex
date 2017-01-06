@@ -1,0 +1,59 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-3">Senem</h1>
+        <p class="lead">Pequena e rápida ferramenta de aprendizagem guiada por simulados.</p>
+    </div>
+</div>
+<!-- Begin page content -->
+<div class="container-fluid">
+    <div class="row faixa">
+        <div class="container">
+            <p> <a href="/sobre">Saiba - mais</a> sobre como funciona esta ferramenta</p>
+        </div>
+    </div>
+    <div class="album">
+        <div class="row">
+            <div class="container">
+                <div class="card">
+                    <img class="card-img-top" src="images/placeholder00.jpg" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Simulados</h4>
+                        <p class="card-text">Gere um simulado de forma totalmente personalizada, escolhendo a quantidade, o período de anos, e a categoria.</p>
+                        <p class="card-text"><small class="text-muted"></small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="images/placeholder01.jpg" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Confiabilidade</h4>
+                        <p class="card-text">Você pode ter uma maior segurança de utilizar as questões que foram aplicadas em provas anterioes do ENEM.</p>
+                        <p class="card-text"><small class="text-muted"></small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="images/placeholder02.jpg" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">Registro de desempenho</h4>
+                        <p class="card-text">Com nosso sistema de simulação de provas é possível registrar gradualmente seu desempenho, e ainda disputar com outros usuários.</p>
+                        <p class="card-text"><small class="text-muted"></small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <h1>Qualidade de estudo</h1>
+            <p class="lead">
+                Se prepare para a maior avaliação do ensino brasileiro, com esta pequena ferramenta de treinamento você estará pegando o ritmo das questões que irá encontrar. Veja o aumento de seu desempenho com o ranker e o seu histório de simulados personalizados.
+                Caso queira queria treinar com suas própria linha de estidos temos a opção de criar sua prórpia lista de questionários.
+            </p>
+            <p class="lead">Nossa equipe agradece sua escolha. <br /> Desejamos uma ótima prova, sucesso!!</p>
+            <p class="lead">Siga - nos:</p>
+            <span>[face]</span>
+            <span>[twitter]</span>
+            <span>[pintirest]</span>
+        </div>
+    </div>
+    <div class="album"></div>
+</div>

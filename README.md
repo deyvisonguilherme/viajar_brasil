@@ -1,19 +1,13 @@
 # Senem
 
-To start your Phoenix app:
+Sistema de simulação do exame nacional do ensino médio.
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
-  * Start Phoenix endpoint with `mix phoenix.server`
+-- Propriedades do Sistema
+* Personalização das questões por quantidade, data de aplicação, área de estudo.
+* Salvar o estado atual do simulado
+* Compartilhar o resultado nas provas
+* Histórico de desempenho
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
-
-## Learn more
-
-  * Official website: http://www.phoenixframework.org/
-  * Guides: http://phoenixframework.org/docs/overview
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+-- Esta aplicação também fornece o serviço de questionário para provas diversas, permitindo
+a inserção 20 questões pelo usuário para treinamento.

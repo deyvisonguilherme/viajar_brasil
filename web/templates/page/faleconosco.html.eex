@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+            <h1>pagina de contatos</h1>
+    </div>
+    <div class="faixa"></div>
+    <div class="row">
+        <form action="">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" class="form-control" id="nome" placeholder="Steven Jobs" />
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" placeholder="steven.jobs@senem.com" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" class="form-control" placeholder="(00) 00000 - 0000" />
+            </div>
+            <div class="form-group">
+                <label for="assunto">Assunto:</label>
+                <input type="text" id="assunto" class="form-control" placeholder="Dúvida" />
+            </div>
+            <div class="form-group">
+                <label for="assunto">Mensagem:</label>
+                <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="Dúvidas?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+</div>
