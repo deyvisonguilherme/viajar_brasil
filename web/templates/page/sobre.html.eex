@@ -1,9 +1,26 @@
     <!-- Begin page content -->
     <div class="container page">
         <div class="mt-1">
-            <h1>Pagina Sobre</h1>
+            <h2 class="display-4">SENEM</h2>
         </div>
-        <!-- <p class="lead">Um pequeno sistema de para geração de simulados para o exame nacional do ensino médio brasileiro, uma ferramenta rápida e fácil para testar seus conhecimentos.</p>
-        <p>Desejamos para você um bom simulado, qualquer dúvida entre em contato conosco pela página de atendimento <a href="faleconosco.html"></a></p>
-        <p>Saiba mais <a href="sobre.html">em poucos passos você conseguirar montar um simulado.</a></p> -->
+
+        <div class="mt-1">
+            <p class="lead">
+                <em class="text-primary">Um pouco de história:</em><br />
+                Vamos começar pelo nome da nossa aplicação, SENEM vem da junção das palavras "simulado e ENEM", o SENEM começou como uma plataforma idealizada por um único programador, Hacker que gostava de compartilhar conhecimento e vendo que poderia ajudar muito mais pessoas dispondo uma ferramenta de aprendizagem on-line.
+                Dando maior importância ao exame nacional do ensino médio brasileiro
+            </p>
+            <p clas="lead">
+                <em>Como funciona?</em><br />
+            </p>
+            <p class="lead">
+                <em>Conheça o processo</em>
+            </p>
+            <p class="lead">
+                <em>Visão</em><br />
+            </p>
+            <p>
+                <em>Sustentabilidade</em><br />
+            </p>
+        </div>
     </div>
