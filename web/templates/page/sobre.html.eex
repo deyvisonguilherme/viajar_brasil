@@ -1,26 +1,49 @@
     <!-- Begin page content -->
     <div class="container page">
         <div class="mt-1">
-            <h2 class="display-4">SENEM</h2>
+            <h2 class="display-3">SENEM</h2>
         </div>
-
+        <hr />
         <div class="mt-1">
-            <p class="lead">
-                <em class="text-primary">Um pouco de história:</em><br />
-                Vamos começar pelo nome da nossa aplicação, SENEM vem da junção das palavras "simulado e ENEM", o SENEM começou como uma plataforma idealizada por um único programador, Hacker que gostava de compartilhar conhecimento e vendo que poderia ajudar muito mais pessoas dispondo uma ferramenta de aprendizagem on-line.
-                Dando maior importância ao exame nacional do ensino médio brasileiro
-            </p>
-            <p clas="lead">
-                <em>Como funciona?</em><br />
-            </p>
-            <p class="lead">
-                <em>Conheça o processo</em>
-            </p>
-            <p class="lead">
-                <em>Visão</em><br />
-            </p>
-            <p>
-                <em>Sustentabilidade</em><br />
-            </p>
+            <div class="lead">
+                <h5 class="text-primary">Um pouco de história:</h5><br />
+                <p class="lead">Vamos começar pelo nome da nossa aplicação, SENEM vem da junção das palavras "simulado e ENEM", o SENEM começou como uma plataforma idealizada por um único programador, Hacker que gostava de compartilhar conhecimento e vendo que poderia ajudar muito mais pessoas dispondo uma ferramenta de aprendizagem on-line.
+                    Dando maior importância ao exame nacional do ensino médio brasileiro.</p>
+            </div>
+            <div clas="lead">
+                <h5 class="text-primary">Como funciona?</h5>
+                <p class="lead">
+                    O SENEM é uma paltaforma de gerenciamento de simulados on-line, tendo o maior foco o exame nacional do ensino médio brasileiro, tendo uma base de informações de todas as questões já feitas nas edições do exame, dispomos de um algoritmo de geração de simulado, que garante a personalização dos teste. <br />
+                    Apartir dos nossos painéis os nossos clientes podem customizar a simulação, escolhendo o número de questões, o período em que as questões foram aplicadas no exame, e a área de estudo de cada questão.
+                    O usuário pode inserir suas próprias perguntas para provas diversas, apartir desta ferramenta é possível criar planos de estudo personalizados.
+                </p>
+
+            </div>
+            <div class="lead">
+                <h5 class="text-primary">Conheça o processo</h5>
+                <p class="lead">
+                    Para ter acesso a ferramenta é necessário o cadastramento de uma conta de e-mail, o nome do usuário e uma senha.
+                    Ao efetuar o login no sistema e localizando no link do menu principal de simulados, o usuário poderá trabalhar, com a manipulação do sistema.
+                    <br />Para saber mais, acesse o nossa <a href="#documentacao">documentação</a> on-line.
+                    <br />Caso tenha alguma dúvida ou sugestão entre em contato com a página de <a href="/faleconosco">fale conosco</a>, estamos a sua disposição.
+                </p>
+                <p class="lead">Lista de recursos disponíveis:</p>
+                <p class="lead">
+                 <ul class="list-group">
+                    <li class="list-group-item">Testes personalizados</li>
+                    <li class="list-group-item">Histórico de desempenho</li>
+                    <li class="list-group-item">Competição de questões</li>
+                    <li class="list-group-item">Criação de Ranking</li>
+                    <li class="list-group-item">Informações Gerais sobre o exame</li>
+                </ul>
+                </p>
+            </div>
+            <div class="lead">
+                <h5 class="text-primary">Visão</h5>
+                <p class="lead">
+                    "Fornecer um sistema amplo de aprendizagem colaborativa, atuando de forma abrangente e intuitivo, sendo reconhecido como a melhor plataforma de aprendizagem por simulação, ajudando pessoas a adquirir conhecimentos de forma inovadora e de qualidade."
+                <cite>Deyvison Guilherme</cite>
+                </p>
+            </div>
         </div>
     </div>
