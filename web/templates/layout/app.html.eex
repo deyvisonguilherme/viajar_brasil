@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title><%= assigns[:page_title] <> " | SENEM" %></title>
+    <title>APP</title>
     <meta name="description" content="sistema de simulação para prova do enem">
     <meta name="author" content="Deyvison Guilherme">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -46,6 +46,8 @@
 
 
 <%= render @view_module, @view_template, assigns %>
+
+
     <script src="<%= static_path(@conn, "/js/jquery-3.1.1.min.js") %>"></script>
     <script src="<%= static_path(@conn, "/js/bootstrap.min.js") %>"></script>
     <script src="<%= static_path(@conn, "/js/tether.min.js") %>"></script>

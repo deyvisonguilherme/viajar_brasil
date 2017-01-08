@@ -16,7 +16,12 @@ defmodule Senem.Router do
   scope "/", Senem do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
+    # get "/", SessionController, :new
+    post "/login", SessionController, :create
+    get "/logout", SessionController, :delete
+    get "/registration", RegistrationController, :new
+    post "/registration", RegistrationController, :create
+    get  "/", PageController, :index
   end
 
   # Other scopes may use custom stacks.

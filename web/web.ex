@@ -31,6 +31,7 @@ defmodule Senem.Web do
       use Phoenix.Controller
 
       alias Senem.Repo
+      alias Senem.User
       import Ecto
       import Ecto.Query
 
