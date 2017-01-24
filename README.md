@@ -1,19 +1,16 @@
 # Senem
 
-To start your Phoenix app:
+Simulado para prova do exame nacional do ensino médio no Brasil, desenvolvido
+utilizando as linguagens de programação:
+  * GO
+  * Elixir
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
-  * Start Phoenix endpoint with `mix phoenix.server`
+Para iniciar o aplicativo:
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+  * Entre no diretório do aplicativo
+  * Instale as dependências `mix deps.get`
+  * Configure a conexão com o banco no arquivo `config/config.exs`
+  * Crie a base de dados e as migrações `mix ecto.create && mix ecto.migrate`
+  * Inicie o aplicativo `mix phoenix.server`
 
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
-
-## Learn more
-
-  * Official website: http://www.phoenixframework.org/
-  * Guides: http://phoenixframework.org/docs/overview
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+O aplicativo estará acessível pela url [`localhost:4000`](http://localhost:4000) em seu browser.
