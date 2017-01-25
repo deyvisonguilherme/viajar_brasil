@@ -1,42 +1,41 @@
 package main
 
 import (
+	"database/sql"
 	"fmt"
-	"github.com/deyvison/senem"
-	"github.com/julienschmidt/httprouter"
-	"log"
-	"net/http"
+	_ "github.com/lib/pq"
 )
 
-func Index(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
-	fmt.Fprint(w, "Feliz Ano Novo!")
+func dbConn() {
+	db, err := sql.Open("postgres", "postgres://developer:colleto@localhost/senem_test?sslmode=disabled")
+	if db != nil {
+		panic(err.Error())
+	}
+	return db
 }
 
-func Hello(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
-	fmt.Fprint(w, "hello, %s!\n", ps.ByName("name"))
+func addcaderno() {
+	db := dbConn()
+	fmt.Println("Sucesso")
+	defer db.Close()
+}
+
+func addpergunta() {
+	rows, err := db.Query()
+
+	if err, ok := err.(*pq.Error); ok {
+		fmt.Println("pq error:", err.Code.Name())
+	}
+}
+
+func gabarito() {
 
 }
 
-func GetListCaderno(w http.ResponseWriter, r *http.Request, ps httrouter.Params) {
-	var caderno Caderno
-	db.First(&caderno)
+func usuario() {
+
 }
 
-func GetCadernoById(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
-	var caderno Caderno
-	db.First(&caderno, ps.Cd_Caderno)
-}
+func db_usuario() {
 
-func AddCaderno(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
-	db.Create(&Caderno{})
-}
-
-func UpCaderno() {
-	var caderno Caderno
-	db.Model(&caderno).Update("params", "value")
-}
-
-func DelCaderno(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
-	var caderno Caderno
-	db.Delete(&caderno)
 }
