@@ -1,27 +1,26 @@
 package models
 
-// Categoria representa o organograma de categoria.
-type Categoria struct {
-	ID           int
-	DSCcategoria string
-	Ativo        bool
+// mdlcateogira representa o organograma de categoria.
+type mdlcateogira struct {
+	Codigo    int    `json:"id"`
+	Categoria string `json:"categoria"`
 }
 
-// GetCategorias  função que pega todas as categorias cadastradas.
-func GetCategorias() ([]*Categoria, error) {
-	linhas, err := db.Query("select id, ds_categoria, ativo from categorias where ativo=True")
-
+// ListCategoria retona uma lista de categorias.
+func ListCategoria() ([]*mdlcateogira, error) {
+	linhas, err := db.Query("select codigo, categoria from vwCategorias")
 	if err != nil {
 		return nil, err
 	}
 
 	defer linhas.Close()
 
-	categorias := make([]*Categoria, 0)
-	for linhas.Next() {
-		objCategoria := new(Categoria)
+	categorias := make([]*mdlcateogira, 0)
 
-		err := linhas.Scan(&objCategoria.ID, &objCategoria.DSCcategoria, &objCategoria.Ativo)
+	for linhas.Next() {
+		objCategoria := new(mdlcateogira)
+
+		err := linhas.Scan(&objCategoria.Codigo, &objCategoria.Categoria)
 
 		if err != nil {
 			return nil, err

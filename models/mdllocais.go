@@ -1,28 +1,28 @@
 package models
 
-// Local representa um local buscado pelo usuário.
-type Local struct {
-	Foto      string
-	Regiao    string
-	Categoria string
-	Cidade    string
+// mdllocal representa um local buscado pelo usuário.
+type mdllocal struct {
+	Codigo    int    `json:"codigo"`
+	Categoria string `json:"categoria"`
+	Regiao    string `json:"regiao"`
+	Foto      string `json:"foto"`
+	Cidade    string `json:"cidade"`
 }
 
-// GetLocais função responsável por buscar locais no banco de dados.
-func GetLocais(vregiao int, vcategoria int) ([]*Local, error) {
-	linhas, err := db.Query("select * from spt_select_locais($1,$2,True)", vregiao, vcategoria)
-
+// ListLocais função responsável por buscar locais no banco de dados.
+func ListLocais(vregiao int, vcategoria int) ([]*mdllocal, error) {
+	linhas, err := db.Query("select codigo, categoria, regiao, foto, cidade from spt_select_locais($1,$2)", vregiao, vcategoria)
 	if err != nil {
 		return nil, err
 	}
 
 	defer linhas.Close()
 
-	locais := make([]*Local, 0)
+	locais := make([]*mdllocal, 0)
 
 	for linhas.Next() {
-		objLocais := new(Local)
-		err := linhas.Scan(&objLocais.Foto, &objLocais.Regiao, &objLocais.Categoria, &objLocais.Cidade)
+		objLocais := new(mdllocal)
+		err := linhas.Scan(&objLocais.Codigo, &objLocais.Categoria, &objLocais.Regiao, &objLocais.Foto, &objLocais.Cidade)
 
 		if err != nil {
 			return nil, err

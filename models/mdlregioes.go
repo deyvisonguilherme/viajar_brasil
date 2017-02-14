@@ -1,15 +1,17 @@
 package models
 
+import "fmt"
+
 // Regioes representa um objeto Regioes.
-type Regioes struct {
-	ID     int
-	Estado string
-	Ativo  bool
+type mdlregiao struct {
+	Codigo  int    `json:"codigo"`
+	Regiao  string `json:"regiao"`
+	Estados *string
 }
 
-// GetRegioes função para busca de regioes.
-func GetRegioes() ([]*Regioes, error) {
-	linhas, err := db.Query("select id, estado, ativo from regioes where ativo = True order by estado")
+// ListRegioes return função para busca de regioes.
+func ListRegioes() ([]*mdlregiao, error) {
+	linhas, err := db.Query("select codigo, regiao, estados from vwRegioes")
 
 	if err != nil {
 		return nil, err
@@ -17,11 +19,11 @@ func GetRegioes() ([]*Regioes, error) {
 
 	defer linhas.Close()
 
-	regioes := make([]*Regioes, 0)
+	regioes := make([]*mdlregiao, 0)
 
 	for linhas.Next() {
-		objRegioes := new(Regioes)
-		err := linhas.Scan(&objRegioes.ID, &objRegioes.Estado, &objRegioes.Ativo)
+		objRegioes := new(mdlregiao)
+		err := linhas.Scan(&objRegioes.Codigo, &objRegioes.Regiao, &objRegioes.Estados)
 
 		if err != nil {
 			return nil, err
@@ -29,7 +31,7 @@ func GetRegioes() ([]*Regioes, error) {
 
 		regioes = append(regioes, objRegioes)
 	}
-
+	fmt.Println(regioes)
 	if err = linhas.Err(); err != nil {
 		return nil, err
 	}
