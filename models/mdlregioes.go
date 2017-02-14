@@ -1,37 +1,38 @@
 package models
 
-type Regiao struct{
-	Id      int
-	Regiao  string
-	Estado  string 
-	Ativo   bool
+// Regioes representa um objeto Regioes.
+type Regioes struct {
+	ID     int
+	Estado string
+	Ativo  bool
 }
 
-func GetRegioes()([]*Regiao, error){
-	linhas, err := db.Query("select id, regiao, estado, ativo from regioes where ativo = True")
-	
-    if err != nil {
-        return nil, err
-    }
+// GetRegioes função para busca de regioes.
+func GetRegioes() ([]*Regioes, error) {
+	linhas, err := db.Query("select id, estado, ativo from regioes where ativo = True order by estado")
+
+	if err != nil {
+		return nil, err
+	}
 
 	defer linhas.Close()
-	
-	regioes := make([]*Regiao, 0)
-	
-	for linhas.Next(){
-		obj_regioes := new(Regiao)
-		err := linhas.Scan(&obj_regioes.Id,&obj_regioes.Regiao,&obj_regioes.Estado,&obj_regioes.Ativo)	
 
-	    if err != nil {
-	        return nil, err
-	    }
+	regioes := make([]*Regioes, 0)
 
-		regioes = append(regioes, obj_regioes)
+	for linhas.Next() {
+		objRegioes := new(Regioes)
+		err := linhas.Scan(&objRegioes.ID, &objRegioes.Estado, &objRegioes.Ativo)
+
+		if err != nil {
+			return nil, err
+		}
+
+		regioes = append(regioes, objRegioes)
 	}
-	
+
 	if err = linhas.Err(); err != nil {
 		return nil, err
 	}
-		
-		return regioes, nil
+
+	return regioes, nil
 }

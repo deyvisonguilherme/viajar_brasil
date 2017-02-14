@@ -1,0 +1,123 @@
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	"log"
+	"net/http"
+
+	"os"
+
+	"strconv"
+
+	"github.com/deyvisonguilherme/viajar_brasil/models"
+	"github.com/julienschmidt/httprouter"
+)
+
+func init() {
+	models.InitDB("postgres://developer:colleto@localhost/viajar_brasil?sslmode=disable")
+	log.SetOutput(os.Stdout)
+}
+
+func main() {
+
+	router := httprouter.New()
+
+	router.GET("/categorias", categoriasList)
+	router.GET("/regioes", regioesList)
+	router.GET("/locais/:regiao/:categoria", locaisList)
+	router.GET("/test/:name", testando)
+
+	log.Fatal(http.ListenAndServe(":8080", router))
+}
+func testando(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
+	fmt.Fprintf(w, "hello, %s!\n", ps.ByName("name"))
+}
+
+func categoriasList(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
+	if r.Method != "GET" {
+		http.Error(w, http.StatusText(405), 405)
+		return
+	}
+
+	categorias, err := models.GetCategorias()
+
+	if err != nil {
+		http.Error(w, http.StatusText(500), 500)
+		return
+	}
+
+	js, err := json.Marshal(categorias)
+
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.Write(js)
+}
+
+func regioesList(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
+	if r.Method != "GET" {
+		http.Error(w, http.StatusText(405), 405)
+		return
+	}
+
+	regioes, err := models.GetRegioes()
+
+	if err != nil {
+		http.Error(w, http.StatusText(500), 500)
+		return
+	}
+	js, err := json.Marshal(regioes)
+
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	w.Header().Set("Access-Control-Allow-Origin", "*") // Parametro serve para permitir requisição ajax asincrona no mesmo servidor
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(200)
+	w.Write(js)
+}
+
+func locaisList(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
+	if r.Method != "GET" {
+		http.Error(w, http.StatusText(500), 500)
+		return
+	}
+
+	vregiao, err := strconv.Atoi(ps.ByName("regiao"))
+	vcategoria, err := strconv.Atoi(ps.ByName("categoria"))
+
+	if err != nil {
+		http.Error(w, http.StatusText(405), 405)
+		return
+	}
+
+	fmt.Println(vregiao)
+	fmt.Println(vcategoria)
+
+	locais, err := models.GetLocais(vregiao, vcategoria)
+
+	fmt.Println(locais)
+
+	if err != nil {
+		http.Error(w, http.StatusText(405), 405)
+		return
+	}
+
+	js, err := json.Marshal(locais)
+
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	w.Header().Set("Access-Control-Allow-Origin", "*") // Parametro serve para permitir requisição ajax asincrona no mesmo servidor
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(200)
+	w.Write(js)
+}

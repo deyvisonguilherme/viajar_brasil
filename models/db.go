@@ -1,12 +1,11 @@
 package models
 
-import (
-	"database/sql"
-	_ "github.com/lib/pq"
-)
+import "database/sql"
+import _ "github.com/lib/pq" // import drivers para postgresql
 
 var db *sql.DB
 
+// InitDB inicializa a conexão com o banco de dados.
 func InitDB(dataSourceName string) {
 	var err error
 	db, err = sql.Open("postgres", dataSourceName)
