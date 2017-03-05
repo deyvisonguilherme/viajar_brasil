@@ -4,6 +4,8 @@ import (
 	"log"
 	"os"
 
+	"net/http"
+
 	"github.com/deyvisonguilherme/viajar_brasil/controllers"
 	"github.com/deyvisonguilherme/viajar_brasil/models"
 	"github.com/labstack/echo"
@@ -31,10 +33,24 @@ func main() {
 	}))
 
 	// Router => handler
-	e.GET("/", controllers.Saudacao)
-	e.GET("/regioes", controllers.GetRegioes)
-	e.GET("/categorias", controllers.GetCategorias)
+	e.GET("/", func(c echo.Context) error {
+		return c.String(http.StatusOK, "Olá benvindo a API viaja Brasil!")
+	})
+
+	// Index
 	e.GET("/locais/:regiao/:categoria", controllers.GetLocais)
+	e.GET("/pesquisa", controllers.Pesquisar)
+
+	// Pages
+	e.GET("/page", controllers.Page)
+	e.GET("/page/votar/:usuario/:local/:votacao", controllers.Votar)
+	e.GET("/page/comentar/:usuarios/:local/:comentario", controllers.Comentar)
+
+	// Usuários
+	e.GET("/user/logar", controllers.Logar)
+	e.GET("/user/cadastro", controllers.Cadastro)
+	e.GET("/user/logout", controllers.Logout)
+	e.GET("/user/dadosuser", controllers.DadosUser)
 
 	// Start server
 	e.Logger.Fatal(e.Start(":1323"))
